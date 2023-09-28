@@ -1,10 +1,9 @@
 module aptos_social_network_contract::social_network {
-    use std::string::{Self, String};
-    use std::option::{Self, Option};
+    use std::string::String;
     use std::vector;
     use std::signer;
 
-    const MODULE_ADDRESS: address = @0x1489b0095ebe392e134cf307b90d1e8c4b1d98996230e534dd7e37d47acd36ff;
+    const MODULE_ADDRESS: address = @0x41315b5035fc6897dad06ee7adf9994f93b0668a1586d2d22686965ca72d50ca;
 
     const INVALID_INDEX: u64 = 999999999;
 
@@ -28,7 +27,7 @@ module aptos_social_network_contract::social_network {
 
     struct Post has store, drop, copy {
         content: String,
-        image: Option<String>,
+        image: String,
         comments: vector<Comment>,
         like_count: u64,
     }
@@ -122,7 +121,7 @@ module aptos_social_network_contract::social_network {
             if(nth_user.addr == signer_addr) {
                 let post = Post {
                     content: content,
-                    image: if( *string::bytes(&image) == b"none") option::none() else option::some(image),
+                    image: image,
                     comments: vector[],
                     like_count: 0,
                 };
