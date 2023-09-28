@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-aptos_social_network_contract = "1489b0095ebe392e134cf307b90d1e8c4b1d98996230e534dd7e37d47acd36ff"
+aptos_social_network_contract = "41315b5035fc6897dad06ee7adf9994f93b0668a1586d2d22686965ca72d50ca"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
