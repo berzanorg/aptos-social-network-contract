@@ -4,7 +4,7 @@ module aptos_social_network_contract::social_network {
     use std::signer;
     use std::timestamp;
 
-    const MODULE_ADDRESS: address = @0x41315b5035fc6897dad06ee7adf9994f93b0668a1586d2d22686965ca72d50ca;
+    const MODULE_ADDRESS: address = @0x8defbce28c294ef554e6d61297885e26b9cbdbb506aea6d70e16decd98cc1d1c;
 
     const INVALID_INDEX: u64 = 999999999;
 
