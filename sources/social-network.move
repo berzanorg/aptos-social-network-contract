@@ -2,6 +2,7 @@ module aptos_social_network_contract::social_network {
     use std::string::String;
     use std::vector;
     use std::signer;
+    use std::timestamp;
 
     const MODULE_ADDRESS: address = @0x41315b5035fc6897dad06ee7adf9994f93b0668a1586d2d22686965ca72d50ca;
 
@@ -30,12 +31,14 @@ module aptos_social_network_contract::social_network {
         image: String,
         comments: vector<Comment>,
         like_count: u64,
+        time: u64,
     }
 
     struct Comment has store, drop, copy {
         addr: address,
         content: String,
         like_count: u64,
+        time: u64,
     }
 
 
@@ -124,6 +127,7 @@ module aptos_social_network_contract::social_network {
                     image: image,
                     comments: vector[],
                     like_count: 0,
+                    time: timestamp::now_seconds(),
                 };
 
                 vector::push_back(&mut nth_user.posts, post);
@@ -224,6 +228,7 @@ module aptos_social_network_contract::social_network {
             addr: signer_addr,
             content: content,
             like_count: 0,
+            time: timestamp::now_seconds(),
         };
 
         vector::push_back(&mut post.comments, comment);
