@@ -5,6 +5,7 @@ The dApp is live at [`berzanxyz.github.io`](https://berzanxyz.github.io/aptos-so
 
 An interface for Aptos Social Network resides in [`aptos-social-network-interface`](https://github.com/berzanxyz/aptos-social-network-interface).
 
+Events and tests are not implemented as this project is very basic.
 
 ## Getting Ready
 - Clone the repo with `git clone https://github.com/berzanxyz/aptos-social-network-contract.git`
