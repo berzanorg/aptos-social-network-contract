@@ -1,6 +1,16 @@
 # aptos-social-network-contract
 Move module for Aptos Social Network dApp.
 
+The dApp is live at [`berzanxyz.github.io`](https://berzanxyz.github.io/aptos-social-network-interface).
+
+An interface for Aptos Social Network resides in [`aptos-social-network-interface`](https://github.com/berzanxyz/aptos-social-network-interface).
+
+
+## Getting Ready
+- Clone the repo with `git clone https://github.com/berzanxyz/aptos-social-network-contract.git`
+- You can use Dev Containers for getting the development environment ready.
+
+
 ## Developing
 
 ### Compile:
